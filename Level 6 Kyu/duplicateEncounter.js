@@ -30,11 +30,9 @@ function duplicateEncode(word){
 
 //using map
 function duplicateEncode(word){
-  return word
-    .toLowerCase()
-    .split('')
-    .map( function (a, i, w) {
-      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
-    })
-    .join('');
+    // ...
+  word = word.toLowerCase();
+  return word.split("").map((letter) => 
+         word.indexOf(letter) === word.lastIndexOf(letter) ? "(" : ")"
+      ).join("")
 }
